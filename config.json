@@ -5,6 +5,7 @@
   "inbounds": [
     {
       "port": 8080,
+      "listen": "0.0.0.0",
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -13,12 +14,17 @@
             "alterId": 0
           }
         ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none"
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom"
+      "protocol": "freedom",
+      "tag": "direct"
     }
   ]
 }
